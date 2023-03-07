@@ -33,8 +33,6 @@ namespace FitnessApp
         private readonly DatabaseService _service = new();
         public WorkOutPageViewModel()
         {
-            LoadAlWorkout();
-
             RefreshAllWorkoutCommand = new Command<RefreshView>(async ( r ) =>
             {
                 await LoadAlWorkout(); 
@@ -62,6 +60,8 @@ namespace FitnessApp
                 }
 
             });
+
+            LoadAlWorkout();
         }
 
         public async Task LoadAlWorkout()

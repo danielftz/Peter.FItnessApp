@@ -10,16 +10,6 @@ namespace FitnessApp
         {
             _vm = new HomePageViewModel();
 
-            //Border container = new Border()
-            //{
-            //    StrokeShape = new RoundRectangle()
-            //    {
-            //        CornerRadius = new CornerRadius(10),
-            //    },
-            //    StrokeThickness = 0,
-            //    BackgroundColor = Palette.PrimaryBackground,
-            //};
-
 
             Image icon = new Image
             {
@@ -42,7 +32,6 @@ namespace FitnessApp
             text.SetBinding(Label.TextProperty, new Binding(nameof(_vm.DayCounter), source: _vm, stringFormat: "You have worked out for {0} days in a row!"));
 
 
-            //container.Content = text;
 
             Button button = new Button()
             {
